@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        div{
+            margin: auto;
+            width: 30%;
+            padding: 10px;
+            border: 3px solid #73AD21;
+            background-color: #bae87b;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Form</h1>
+    <form name="formUser" onsubmit="return validareForm()" method="post">
+        <p>Inserisci il tuo nome e cognome:</p>
+        <label for="fname">Nome:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Cognome:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <p>Inserisci il tuo sesso:</p>
+        <input type="radio" id="html" name="fav" value="HTML">
+        <label for="html">Maschio</label><br>
+        <input type="radio" id="css" name="sesso" value="CSS">
+        <label for="css">Femmina</label><br><br>
+        <label for="continenti">Seleziona il tuo continente d'origine:</label>
+        <select id="continenti" name="conti">
+            <option value="europa">Europa</option>
+            <option value="asia">Asia</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+          </select>
+        <p>Inserisci il tipo di account</p>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">Google</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">Yahoo</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Microsoft Edge</label><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd">
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <script>
+        function validareForm() {
+            let x = document.forms["formUser"]["fname"].value;
+            if (x == "") {
+                alert("Le caselle devono essere compilate");
+                return false;
+            }
+        }
+
+        function stampaDati(event){
+            //codice da migliorare...
+            
+        }
+    </script>
+</body>
+</html>
